@@ -18,12 +18,12 @@
     "FechaVencimiento": "2028-06-15T00:00:00"
   },
   {
-    "Id": 3,
+    "Id": 4,
     "Nombre": "Leche Descremada",
-    "Categoria": "Lacteos",
-    "Descripcion": "Litro de leche descremada ",
-    "Precio": 16,
+    "Categoria": "Lácteos",
+    "Descripcion": "Leche Descremada marca Pino",
+    "Precio": 22.50,
     "CantidadEnStock": 50,
-    "FechaVencimiento": "2029-08-12T00:00:00"
+    "FechaVencimiento": "2027-09-25T00:00:00"
   }
 ]

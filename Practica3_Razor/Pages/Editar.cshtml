@@ -5,10 +5,10 @@
 }
 
 <div class="container mt-4">
-    <h2>✏️ Editar Producto</h2>
+    <h2 class="text-center"> Editar Producto</h2>
     <hr />
 
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-md-6 shadow-sm p-4 bg-light rounded">
             <form method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
@@ -52,7 +52,7 @@
                     <span asp-validation-for="ProductoEditar.FechaVencimiento" class="text-danger"></span>
                 </div>
 
-                <div class="mt-4 d-flex gap-2">
+                <div class="mt-4 d-flex justify-content-center gap-2">
                     <button type="submit" class="btn btn-warning"> Actualizar Producto</button>
                     <a asp-page="/Index" class="btn btn-secondary">Cancelar</a>
                 </div>

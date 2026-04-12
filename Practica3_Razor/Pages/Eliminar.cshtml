@@ -1,0 +1,48 @@
+@page "{id:int}"
+@model Practica3_Razor.Pages.EliminarModel
+@{
+    ViewData["Title"] = "Eliminar Producto";
+}
+
+<div class="container mt-4">
+    <h2 class="text-danger text-center"> Eliminar Producto</h2>
+    <hr />
+
+    <div class="alert alert-warning shadow-sm">
+        <h4 class="alert-heading text-center">¡Atención!</h4>
+        <p class="mb-0">¿Estás completamente seguro de que deseas eliminar este producto? <strong>Esta acción no se puede deshacer.</strong></p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6 shadow-sm p-4 bg-light rounded border border-danger">
+            <h4 class="text-secondary">Detalles del Producto</h4>
+            <hr />
+            
+            <dl class="row">
+                <dt class="col-sm-4 text-end">ID:</dt>
+                <dd class="col-sm-8">@Model.ProductoEliminar.Id</dd>
+
+                <dt class="col-sm-4 text-end">Nombre:</dt>
+                <dd class="col-sm-8 fw-bold">@Model.ProductoEliminar.Nombre</dd>
+
+                <dt class="col-sm-4 text-end">Categoría:</dt>
+                <dd class="col-sm-8"><span class="badge bg-secondary">@Model.ProductoEliminar.Categoria</span></dd>
+
+                <dt class="col-sm-4 text-end">Precio:</dt>
+                <dd class="col-sm-8">Q @Model.ProductoEliminar.Precio.ToString("0.00")</dd>
+
+                <dt class="col-sm-4 text-end">Stock:</dt>
+                <dd class="col-sm-8">@Model.ProductoEliminar.CantidadEnStock unidades</dd>
+            </dl>
+
+            <form method="post">
+                <input type="hidden" asp-for="ProductoEliminar.Id" />
+                
+                <div class="mt-4 d-flex justify-content-center gap-2">
+                    <button type="submit" class="btn btn-danger fw-bold"> Sí, Eliminar Definitivamente</button>
+                    <a asp-page="/Index" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
