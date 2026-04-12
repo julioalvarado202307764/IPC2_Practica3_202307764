@@ -1,8 +1,13 @@
+using Practica3_Razor.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
+builder.Services.AddHttpClient<ProductoService>(client =>
+{
+    // OJO AQUÍ: Reemplaza esta URL con el puerto exacto donde se levanta tu API
+    client.BaseAddress = new Uri("http://localhost:5039/"); 
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
