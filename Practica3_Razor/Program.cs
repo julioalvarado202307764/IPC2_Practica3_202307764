@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddHttpClient<ProductoService>(client =>
 {
-    // OJO AQUÍ: Reemplaza esta URL con el puerto exacto donde se levanta tu API
+    // puerto que usa el pc
     client.BaseAddress = new Uri("http://localhost:5039/"); 
 });
 var app = builder.Build();

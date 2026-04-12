@@ -1,19 +1,26 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Practica3_Razor.Models;
+using Practica3_Razor.Services;
 
-namespace Practica3_Razor.Pages;
-
-public class IndexModel : PageModel
+namespace Practica3_Razor.Pages
 {
-    private readonly ILogger<IndexModel> _logger;
-
-    public IndexModel(ILogger<IndexModel> logger)
+    public class IndexModel : PageModel
     {
-        _logger = logger;
-    }
+        private readonly ProductoService _productoService;
 
-    public void OnGet()
-    {
+        // Inyectamos nuestro puente hacia la API
+        public IndexModel(ProductoService productoService)
+        {
+            _productoService = productoService;
+        }
 
+        // Esta lista guardará lo que nos responda la API
+        public List<Producto> Productos { get; set; } = new List<Producto>();
+
+        // Este método se ejecuta automáticamente cuando cargas la página
+        public async Task OnGetAsync()
+        {
+            Productos = await _productoService.GetProductosAsync();
+        }
     }
 }
