@@ -43,6 +43,10 @@ namespace Practica3_API.Controllers
         [HttpPost]
         public ActionResult<Producto> CrearProducto([FromBody] Producto nuevoProducto)
         {
+            if (nuevoProducto.Id != 0)
+            {
+                return BadRequest(new { mensaje = "No debes incluir un Id al crear un producto. El sistema lo asignará automáticamente." });
+            }
             var productos = _inventarioService.GetProductos();
 
             // Auto-incrementar el ID simulando una base de datos
