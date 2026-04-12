@@ -4,7 +4,7 @@
     "Nombre": "Leche Entera",
     "Categoria": "Lácteos",
     "Descripcion": "Litro de leche entera pasteurizada",
-    "Precio": 15.50,
+    "Precio": 20.00,
     "CantidadEnStock": 50,
     "FechaVencimiento": "2026-05-10T00:00:00"
   },
@@ -15,7 +15,7 @@
     "Descripcion": "Queso crema para untar 200g",
     "Precio": 18.00,
     "CantidadEnStock": 20,
-    "FechaVencimiento": "2026-06-15T00:00:00"
+    "FechaVencimiento": "2028-06-15T00:00:00"
   },
   {
     "Id": 3,
@@ -24,6 +24,6 @@
     "Descripcion": "Litro de leche descremada ",
     "Precio": 16,
     "CantidadEnStock": 50,
-    "FechaVencimiento": "2027-08-12T00:00:00"
+    "FechaVencimiento": "2029-08-12T00:00:00"
   }
 ]
