@@ -13,7 +13,7 @@ namespace Practica3_Razor.Models
         [Required(ErrorMessage = "La categoría es obligatoria.")]
         public string Categoria { get; set; } = string.Empty;
 
-        public string Descripcion { get; set; } = string.Empty;
+        public string? Descripcion { get; set; } = string.Empty;
 
         [Range(0.01, 100000, ErrorMessage = "El precio debe ser mayor a 0.")]
         public decimal Precio { get; set; }

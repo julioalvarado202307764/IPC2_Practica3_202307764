@@ -2,7 +2,7 @@
   {
     "Id": 1,
     "Nombre": "Leche Entera",
-    "Categoria": "L\u00E1cteos",
+    "Categoria": "Lácteos",
     "Descripcion": "Litro de leche entera pasteurizada",
     "Precio": 15.50,
     "CantidadEnStock": 50,
@@ -11,10 +11,19 @@
   {
     "Id": 2,
     "Nombre": "Queso Crema",
-    "Categoria": "L\u00E1cteos",
+    "Categoria": "Lácteos",
     "Descripcion": "Queso crema para untar 200g",
     "Precio": 18.00,
     "CantidadEnStock": 20,
     "FechaVencimiento": "2026-06-15T00:00:00"
+  },
+  {
+    "Id": 3,
+    "Nombre": "Leche Descremada",
+    "Categoria": "Lacteos",
+    "Descripcion": "Litro de leche descremada ",
+    "Precio": 16,
+    "CantidadEnStock": 50,
+    "FechaVencimiento": "2027-08-12T00:00:00"
   }
 ]

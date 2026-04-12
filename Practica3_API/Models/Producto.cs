@@ -14,7 +14,7 @@ namespace Practica3_API.Models
         public string Categoria { get; set; } = string.Empty;
 
         // La descripción la dejamos opcional, sin el Required
-        public string Descripcion { get; set; } = string.Empty;
+        public string? Descripcion { get; set; } 
 
         [Range(0.01, 100000, ErrorMessage = "El precio debe ser mayor a 0.")]
         public decimal Precio { get; set; }

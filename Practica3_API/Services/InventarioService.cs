@@ -24,7 +24,10 @@ namespace Practica3_API.Services
         public void SaveProductos(List<Producto> productos)
         {
             // WriteIndented = true hace que el JSON se guarde con saltos de línea y se vea bonito, no en una sola línea
-            var options = new JsonSerializerOptions { WriteIndented = true };
+            var options = new JsonSerializerOptions {
+                WriteIndented = true,
+                //entender español
+                Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping};
             var json = JsonSerializer.Serialize(productos, options);
             
             File.WriteAllText(_filePath, json);

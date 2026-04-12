@@ -1,0 +1,64 @@
+@page
+@model Practica3_Razor.Pages.CrearModel
+@{
+    ViewData["Title"] = "Agregar Producto";
+}
+
+<div class="container mt-4">
+    <h2> Agregar Nuevo Producto</h2>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-6 shadow-sm p-4 bg-light rounded">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <div class="mb-3">
+                    <label asp-for="NuevoProducto.Nombre" class="form-label fw-bold">Nombre del Producto</label>
+                    <input asp-for="NuevoProducto.Nombre" class="form-control" placeholder="Ej. Leche Descremada" />
+                    <span asp-validation-for="NuevoProducto.Nombre" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="NuevoProducto.Categoria" class="form-label fw-bold">Categoría</label>
+                    <input asp-for="NuevoProducto.Categoria" class="form-control" placeholder="Ej. Lácteos" />
+                    <span asp-validation-for="NuevoProducto.Categoria" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="NuevoProducto.Descripcion" class="form-label fw-bold">Descripción</label>
+                    <textarea asp-for="NuevoProducto.Descripcion" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="NuevoProducto.Descripcion" class="text-danger"></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="NuevoProducto.Precio" class="form-label fw-bold">Precio (Q)</label>
+                        <input asp-for="NuevoProducto.Precio" type="number" step="0.01" class="form-control" />
+                        <span asp-validation-for="NuevoProducto.Precio" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="NuevoProducto.CantidadEnStock" class="form-label fw-bold">Stock Inicial</label>
+                        <input asp-for="NuevoProducto.CantidadEnStock" type="number" class="form-control" />
+                        <span asp-validation-for="NuevoProducto.CantidadEnStock" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="NuevoProducto.FechaVencimiento" class="form-label fw-bold">Fecha de Vencimiento (Opcional)</label>
+                    <input asp-for="NuevoProducto.FechaVencimiento" type="date" class="form-control" />
+                    <span asp-validation-for="NuevoProducto.FechaVencimiento" class="text-danger"></span>
+                </div>
+
+                <div class="mt-4 d-flex gap-2">
+                    <button type="submit" class="btn btn-success"> Guardar Producto</button>
+                    <a asp-page="/Index" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
