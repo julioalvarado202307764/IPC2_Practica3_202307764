@@ -1,0 +1,11 @@
+[
+  {
+    "Id": 1,
+    "Nombre": "Leche Entera",
+    "Categoria": "Lácteos",
+    "Descripcion": "Litro de leche entera pasteurizada",
+    "Precio": 15.50,
+    "CantidadEnStock": 50,
+    "FechaVencimiento": "2026-05-10T00:00:00"
+  }
+]

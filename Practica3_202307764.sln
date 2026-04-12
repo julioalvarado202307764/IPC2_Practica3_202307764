@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica3_API", "Practica3_API\Practica3_API.csproj", "{5F242211-163D-91E4-5002-8AD9F4469171}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica3_Razor", "Practica3_Razor\Practica3_Razor.csproj", "{DD417D1C-F9C6-BE5D-85E2-E4E9DBAF3480}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F242211-163D-91E4-5002-8AD9F4469171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F242211-163D-91E4-5002-8AD9F4469171}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F242211-163D-91E4-5002-8AD9F4469171}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F242211-163D-91E4-5002-8AD9F4469171}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD417D1C-F9C6-BE5D-85E2-E4E9DBAF3480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD417D1C-F9C6-BE5D-85E2-E4E9DBAF3480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD417D1C-F9C6-BE5D-85E2-E4E9DBAF3480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD417D1C-F9C6-BE5D-85E2-E4E9DBAF3480}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C85B96CA-4D93-499D-88C9-8EB11FB0774C}
+	EndGlobalSection
+EndGlobal
