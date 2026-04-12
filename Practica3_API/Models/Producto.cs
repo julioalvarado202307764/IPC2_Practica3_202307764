@@ -1,18 +1,27 @@
 using System;
+using System.ComponentModel.DataAnnotations; // Ojo: Hay que agregar este using
 
 namespace Practica3_API.Models
 {
     public class Producto
     {
-        //id unico
         public int Id { get; set; } 
+
+        [Required(ErrorMessage = "El nombre es obligatorio.")]
         public string Nombre { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "La categoría es obligatoria.")]
         public string Categoria { get; set; } = string.Empty;
+
+        // La descripción la dejamos opcional, sin el Required
         public string Descripcion { get; set; } = string.Empty;
+
+        [Range(0.01, 100000, ErrorMessage = "El precio debe ser mayor a 0.")]
         public decimal Precio { get; set; }
+
+        [Range(0, int.MaxValue, ErrorMessage = "La cantidad en stock no puede ser negativa.")]
         public int CantidadEnStock { get; set; }
         
-        // Nullable (?) porque el enunciado dice "si aplica"
         public DateTime? FechaVencimiento { get; set; } 
     }
 }
