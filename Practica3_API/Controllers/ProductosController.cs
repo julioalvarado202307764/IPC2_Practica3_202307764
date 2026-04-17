@@ -10,7 +10,7 @@ namespace Practica3_API.Controllers
     {
         private readonly InventarioService _inventarioService;
 
-        // Inyección de dependencias del servicio que creamos
+        // Inyección de dependencias del servicio creado
         public ProductosController(InventarioService inventarioService)
         {
             _inventarioService = inventarioService;

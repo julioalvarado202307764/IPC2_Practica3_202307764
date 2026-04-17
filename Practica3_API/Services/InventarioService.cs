@@ -5,10 +5,10 @@ namespace Practica3_API.Services
 {
     public class InventarioService
     {
-        // Ruta dinámica hacia tu carpeta Data
+        // Ruta dinamica hacia tu carpeta Data
         private readonly string _filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "inventario.json");
 
-        // Método para LEER el JSON
+        //LEER JSON
         public List<Producto> GetProductos()
         {
             if (!File.Exists(_filePath))
@@ -20,10 +20,10 @@ namespace Practica3_API.Services
             return JsonSerializer.Deserialize<List<Producto>>(json) ?? new List<Producto>();
         }
 
-        // Método para GUARDAR en el JSON
+        //GUARDAR JSON
         public void SaveProductos(List<Producto> productos)
         {
-            // WriteIndented = true hace que el JSON se guarde con saltos de línea y se vea bonito, no en una sola línea
+            // WriteIndented = true ordenado
             var options = new JsonSerializerOptions {
                 WriteIndented = true,
                 //entender español
